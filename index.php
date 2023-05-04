@@ -58,8 +58,8 @@
     $parking = $_GET["parking"];
     $vote = $_GET["vote"]; 
     ?>
-
-    <table class="table">
+    <!-- TABELLA -->
+    <table class="table table-success table-striped-columns mt-4">
     <thead>
         <tr>
             <?php foreach ($hotels as $item) { ?>
@@ -68,27 +68,23 @@
         </tr>
   </thead>
   <tbody>
-    <tr>
-        <?php foreach ($hotels as $item) { ?>
-      <td><?php echo $item["description"] ?></td>
-      <?php } ?>
-    </tr>
-    <tr>
-        <?php foreach ($hotels as $item) { ?>
-      <td><?php echo $item["vote"] ?></td>
-      <?php } ?>
-    </tr>
-    <tr>
-        <?php foreach ($hotels as $item) { ?>
-      <td><?php echo $item["parking"] ?></td>
-      <?php } ?>
-    <tr>
-    <?php foreach ($hotels as $item) { ?>
-      <td><?php echo $item["distance_to_center"] ?></td>
-      <?php } ?>
-    </tr>
-  </tbody>
+      <?php foreach ($hotels as $item) { ?>
+        <tr>
+            <td><?php echo $item["description"] ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $item["vote"] ?></td>
+        </tr>
+        <tr>
+            <td><?php echo $item["parking"] ?></td>
+            <tr>
+                <td><?php echo $item["distance_to_center"] ?></td>
+            </tr>
+        <?php } ?>
+</tbody>
 </table>
+    <!-- /TABELLA -->
+
 
 
         <form action="index.php" method="GET">
