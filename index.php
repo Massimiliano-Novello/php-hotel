@@ -54,32 +54,26 @@
 </head>
 <body>
     <div class="container">
-    <?php
-    $parking = $_GET["parking"];
-    $vote = $_GET["vote"]; 
-    ?>
     <!-- TABELLA -->
     <table class="table table-success table-striped-columns mt-4">
     <thead>
         <tr>
-            <?php foreach ($hotels as $item) { ?>
-            <th scope="col"><?php echo $item["name"] ?></th>
-            <?php } ?>   
+            <th scope="col">Nome Hotel</th>
+            <th scope="col">Descrizione</th>   
+            <th scope="col">Stelle</th>   
+            <th scope="col">Parcheggio</th>  
+            <th scope="col">Distanza dal centro</th>  
         </tr>
   </thead>
   <tbody>
       <?php foreach ($hotels as $item) { ?>
         <tr>
+            <td><?php echo $item["name"] ?></td>
             <td><?php echo $item["description"] ?></td>
-        </tr>
-        <tr>
             <td><?php echo $item["vote"] ?></td>
-        </tr>
-        <tr>
             <td><?php echo $item["parking"] ?></td>
-            <tr>
-                <td><?php echo $item["distance_to_center"] ?></td>
-            </tr>
+            <td><?php echo $item["distance_to_center"]?></td>
+        </tr>
         <?php } ?>
 </tbody>
 </table>
